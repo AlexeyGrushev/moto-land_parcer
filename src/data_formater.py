@@ -29,9 +29,9 @@ def insert_data(data: dict, good_row: int):
     sheet = workbook.active
 
     # Article
-    sheet.cell(row=good_row, column=1, value="ml" + data["article"])
-    sheet.cell(row=good_row, column=14, value="ml" + data["article"])
-    sheet.cell(row=good_row, column=15, value="ml" + data["article"])
+    sheet.cell(row=good_row, column=1, value=data["article"])
+    sheet.cell(row=good_row, column=14, value=data["article"])
+    sheet.cell(row=good_row, column=15, value=data["article"])
 
     # Good name & Description
     sheet.cell(row=good_row, column=2, value=data["good_name"])

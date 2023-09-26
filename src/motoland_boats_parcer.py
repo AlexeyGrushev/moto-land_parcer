@@ -63,7 +63,7 @@ def get_good_info(good_url: str) -> dict | bool:
         good_data["article"] = soup.find(
             "div",
             class_="article muted font_xs"
-            ).find("span", itemprop="value").text[2:]
+            ).find("span", itemprop="value").text
     except Exception:
         print(good_data["good_name"], "НЕ НАЙДЕН АРТИКУЛ")
 
@@ -108,7 +108,7 @@ def get_good_info(good_url: str) -> dict | bool:
             "div",
             class_="content",
             itemprop="description"
-            ).text.replace("\n", "", 1)[8:]
+            ).text.replace("\n", "", 1).replace("\n", "<br />")[8:]
     except Exception:
         print(good_data["good_name"], "НЕ НАЙДЕНО ОПИСАНИЕ")
         good_data["description"] = "NOT_FOUND"

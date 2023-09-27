@@ -3,10 +3,10 @@ This script made for parsing category "Boats & Engine's" on the [moto-land](http
 ​
 # Installation
 **Create a virtual environment**  
-`python3 -m venv venv`
+`python3 -m venv venv`<br><br>
 ​
-**Install requirements**  
-`pip install -r requirements.txt`
+**Install requirements**  <br>
+`pip install -r requirements.txt`<br><br>
 ​
 **Run script**  
 `python3 -m src.main`

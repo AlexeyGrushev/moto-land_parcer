@@ -16,7 +16,7 @@ CATEGORY_BOATS = "https://deal.by/Lodki-"
 CATEGORY_ENGINES = "https://deal.by/Lodochnye-motory"
 
 GROUP_ENGINES = [10558128, "Лодочные моторы BREEZE"]
-# ENGINES_GROUP_NUMBER = "https://top100.by/g10558128-lodochnye-motory-breeze"
+GROUP_BOATS = [10438662, "Лодки ПВХ"]
 
 
 def copy_example_table():
@@ -46,6 +46,8 @@ def insert_data(data: dict, good_row: int):
     elif data["category"] == "Лодки":
         sheet.cell(row=good_row, column=3, value=BOATS_SEARCH)
 
+        sheet.cell(row=good_row, column=11, value=GROUP_BOATS[0])
+        sheet.cell(row=good_row, column=12, value=GROUP_BOATS[1])
         sheet.cell(row=good_row, column=13, value=CATEGORY_BOATS)
     else:
         print("ОШИБКА КАТЕГОРГИИ")
